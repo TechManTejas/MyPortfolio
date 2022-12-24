@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+:hover{
+  cursor: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0px;

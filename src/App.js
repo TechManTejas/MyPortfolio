@@ -1,10 +1,16 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import Home from "./Home/Home"
-import Cursor from "./Components/Cursor/Cursor"
+import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
+
+  const [scrollAmount, setScrollAmount] = useState(0)
+  window.addEventListener("scroll", () => setScrollAmount(window.scrollY))
+
   return (
     <>
-      <Cursor/>
+      <Navbar scrolled={scrollAmount}/>
       <Home/>
     </>
   );

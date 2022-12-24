@@ -1,39 +1,38 @@
+import { useEffect } from "react";
 import "../../CSS/LinkUnderline.css";
 
-function Navbar() {
+function Navbar({scrolled}) {
+
     return (
         <>
-            <div className="w-screen absolute">
-                <nav className="flex justify-end mr-32">
+            <div className="w-screen fixed">
+                <nav className={`flex justify-end pr-32  text-xl font-semibold
+                    ${scrolled ? "bg-gray-900 text-sky-500" :"bg-transparent text-slate-50"}
+                `} style={{ transition:"background 0.25s ease-in-out ; text 0.25s ease-in-out"}}>
 
-                    <button className="text-2xl font-semibold m-2 p-2 
+                    <button className="m-2 p-2 
                     link-underline">
-                        <span className="text-slate-50 text-xl font-semibold">HOME</span>
+                        HOME
                     </button>
 
-                    <button className="text-2xl font-semibold m-2 p-2
+                    <button className="m-2 p-2
                     link-underline" >
-                        <span className="text-slate-50 text-xl font-semibold">ABOUT ME</span>
+                        STORE
                     </button>
 
-                    <button className="text-2xl font-semibold m-2 p-2
+                    <button className="m-2 p-2
                     link-underline" >
-                        <span className="text-slate-50 text-xl font-semibold">HISTORY</span>
+                        BLOGS
                     </button>
 
-                    <button className="text-2xl font-semibold m-2 p-2
+                    <button className="m-2 p-2
                     link-underline" >
-                        <span className="text-slate-50 text-xl font-semibold">PORTFOLIO</span>
+                        PORTFOLIO
                     </button>
 
-                    <button className="text-2xl font-semibold m-2 p-2
+                    <button className="m-2 p-2
                     link-underline" >
-                        <span className="text-slate-50 text-xl font-semibold">BLOG</span>
-                    </button>
-
-                    <button className="text-2xl font-semibold m-2 p-2
-                    link-underline" >
-                        <span className="text-slate-50 text-xl font-semibold">CONTACT</span>
+                        CONTACT
                     </button>
 
                 </nav>

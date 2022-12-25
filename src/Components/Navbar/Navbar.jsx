@@ -1,44 +1,46 @@
-import { useEffect } from "react";
+import { Link } from 'react-router-dom'
 import "../../CSS/LinkUnderline.css";
+import "../../CSS/BottomBoxShadow.css"
 
-function Navbar({scrolled}) {
+function Navbar({ scrolled }) {
 
     return (
         <>
             <div className="w-screen fixed">
                 <nav className={`flex justify-end pr-32  text-xl font-semibold
-                    ${scrolled ? "bg-gray-900 text-sky-500" :"bg-transparent text-slate-50"}
-                `} style={{ transition:"background 0.25s ease-in-out ; text 0.25s ease-in-out"}}>
+                    ${scrolled ? "bg-gray-900 text-sky-500 bottomBoxShadow" : "bg-transparent text-slate-50"}
+                `} style={{ transition: "background-color 0.25s ease-in-out" }}>
 
-                    <button className="m-2 p-2 
+                    <Link to={"/"} className="m-2 p-2 
                     link-underline">
                         HOME
-                    </button>
+                    </Link>
 
-                    <button className="m-2 p-2
+
+                    <Link to={"/Store"} className="m-2 p-2
                     link-underline" >
                         STORE
-                    </button>
+                    </Link>
 
-                    <button className="m-2 p-2
+                    <Link to={"/Blogs"} className="m-2 p-2
                     link-underline" >
                         BLOGS
-                    </button>
+                    </Link>
 
-                    <button className="m-2 p-2
+                    <Link to={"/Portfolio"} className="m-2 p-2
                     link-underline" >
                         PORTFOLIO
-                    </button>
+                    </Link>
 
-                    <button className="m-2 p-2
+                    <Link to={"/Contact"} className="m-2 p-2
                     link-underline" >
                         CONTACT
-                    </button>
+                    </Link>
 
                 </nav>
             </div>
         </>
-        
+
     );
 }
 

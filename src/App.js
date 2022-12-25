@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { useEffect } from "react";
-import Home from "./Home/Home"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar/Navbar"
+import Portfolio from "./Pages/Portfolio/Portfolio"
+import Contact from "./Pages/Contact/Contact"
 
 function App() {
 
@@ -10,8 +12,13 @@ function App() {
 
   return (
     <>
-      <Navbar scrolled={scrollAmount}/>
-      <Home/>
+      <Router>
+        <Navbar scrolled={scrollAmount} />
+        <Routes>
+          <Route exact path="/" element={<Portfolio />} />
+          <Route exact path="/Contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </>
   );
 }

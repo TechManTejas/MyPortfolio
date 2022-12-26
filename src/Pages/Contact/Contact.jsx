@@ -9,7 +9,7 @@ function Contact() {
             <div className="h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-700 via-slate-900 to-black">
                 <div className="flex h-screen justify-center items-center">
 
-                    <div className="border-2">
+                    <div>
 
                         <div className="flex">
                             <div className=''>
@@ -50,10 +50,6 @@ function Contact() {
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            
-                            <div className="w-96 bg-gray-600" >
 
                             </div>
                         </div>
